@@ -31,15 +31,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to navbar
+// Add scroll effect to navbar (maintain dark theme)
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = 'rgba(45, 55, 72, 0.95)';
         navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
     } else {
-        navbar.style.background = 'white';
+        navbar.style.background = '#2d3748';
         navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
     }
 });
 
