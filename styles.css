@@ -108,6 +108,16 @@ p {
     font-size: 1.8rem;
 }
 
+.nav-logo a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.nav-logo a:hover {
+    opacity: 0.8;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -1536,6 +1546,26 @@ p {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
     margin-top: 1rem;
+}
+
+/* Unified Contact Form Styles */
+.conditional-fields {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.conditional-fields[style*="display: none"] {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.conditional-fields[style*="display: block"] {
+    max-height: 1000px;
+    opacity: 1;
+    margin: 1.5rem 0;
+    padding: 0;
 }
 
 /* Case Studies Page Styles */

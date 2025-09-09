@@ -328,6 +328,76 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Unified Contact Form Field Toggling
+function toggleFormFields() {
+    const inquiryType = document.getElementById('inquiry-type');
+    const strategyCallFields = document.getElementById('strategy-call-fields');
+    const marketingAuditFields = document.getElementById('marketing-audit-fields');
+    const generalInquiryFields = document.getElementById('general-inquiry-fields');
+    const submitButton = document.getElementById('submit-button');
+    
+    if (!inquiryType) return;
+    
+    // Hide all conditional fields
+    if (strategyCallFields) strategyCallFields.style.display = 'none';
+    if (marketingAuditFields) marketingAuditFields.style.display = 'none';
+    if (generalInquiryFields) generalInquiryFields.style.display = 'none';
+    
+    // Reset required fields
+    const goalsField = document.getElementById('goals');
+    const challengesField = document.getElementById('challenges');
+    const subjectField = document.getElementById('subject');
+    const messageField = document.getElementById('message');
+    
+    if (goalsField) goalsField.required = false;
+    if (challengesField) challengesField.required = false;
+    if (subjectField) subjectField.required = false;
+    if (messageField) messageField.required = false;
+    
+    // Show relevant fields based on selection
+    switch (inquiryType.value) {
+        case 'strategy-call':
+            if (strategyCallFields) strategyCallFields.style.display = 'block';
+            if (goalsField) goalsField.required = true;
+            if (submitButton) submitButton.textContent = 'Schedule Strategy Call';
+            break;
+        case 'marketing-audit':
+            if (marketingAuditFields) marketingAuditFields.style.display = 'block';
+            if (challengesField) challengesField.required = true;
+            if (submitButton) submitButton.textContent = 'Request Free Audit';
+            break;
+        case 'general-inquiry':
+            if (generalInquiryFields) generalInquiryFields.style.display = 'block';
+            if (subjectField) subjectField.required = true;
+            if (messageField) messageField.required = true;
+            if (submitButton) submitButton.textContent = 'Send Message';
+            break;
+        default:
+            if (submitButton) submitButton.textContent = 'Send Message';
+            break;
+    }
+}
+
+// Function to select inquiry type from contact options
+function selectInquiryType(type) {
+    const inquiryTypeSelect = document.getElementById('inquiry-type');
+    if (inquiryTypeSelect) {
+        inquiryTypeSelect.value = type;
+        toggleFormFields();
+    }
+}
+
+// Initialize form field toggling on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set up the form field toggling
+    const inquiryTypeSelect = document.getElementById('inquiry-type');
+    if (inquiryTypeSelect) {
+        inquiryTypeSelect.addEventListener('change', toggleFormFields);
+        // Initialize with current value
+        toggleFormFields();
+    }
+});
+
 // Service Worker registration for PWA capabilities (optional)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
