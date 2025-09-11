@@ -86,13 +86,13 @@ p {
 
 /* Navigation */
 .navbar {
-    background: #ffffff;
+    background: #333333;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #555555;
 }
 
 .nav-container {
@@ -130,7 +130,7 @@ p {
 
 .nav-link {
     text-decoration: none;
-    color: #333333;
+    color: #ffffff;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -162,7 +162,7 @@ p {
 .bar {
     width: 25px;
     height: 3px;
-    background: #333333;
+    background: #ffffff;
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -548,13 +548,13 @@ p {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #ffffff;
+        background-color: #333333;
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
         padding: 2rem 0;
-        border-top: 1px solid #e0e0e0;
+        border-top: 1px solid #555555;
     }
 
     .nav-menu.active {
