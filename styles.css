@@ -1592,7 +1592,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    background: #2d3748;
+    background: #ffffff;
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -1600,7 +1600,7 @@ p {
 }
 
 .case-study-badge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #4285F4;
     color: white;
     padding: 4px 12px;
     border-radius: 20px;
@@ -1627,7 +1627,7 @@ p {
 }
 
 .results-chart {
-    background: #1a202c;
+    background: #f8f9fa;
     padding: 2rem;
     border-radius: 8px;
 }
@@ -1647,7 +1647,7 @@ p {
 
 .chart-bar {
     flex: 1;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #4285F4;
     border-radius: 4px 4px 0 0;
     position: relative;
     min-height: 20px;
@@ -1680,8 +1680,8 @@ p {
 }
 
 .tag {
-    background: #e6fffa;
-    color: #065f46;
+    background: #E8F5E8;
+    color: #137333;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -1695,7 +1695,7 @@ p {
 }
 
 .industry-card {
-    background: #2d3748;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -1705,7 +1705,7 @@ p {
 .industry-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #4285F4;
     border-radius: 12px;
     display: flex;
     align-items: center;
